@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="box" id="box">
+            <div class="lado"><img src="IMG/fila-1-col-1.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-2.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-3.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-4.jpg""></div>
+            <div class="lado"><img src="IMG/fila-1-col-5.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-6.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-7.jpg" alt=""></div>
+            <div class="lado"><img src="img/fila-1-col-8.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-9.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-10.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-11.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-12.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-13.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-14.jpg" alt=""></div>
+            <div class="lado"><img src="IMG/fila-1-col-15.jpg" alt=""></div>
+            <div class="tapa"><img src="img/TAPA.png" alt=""></div>
+        </div>
+    </div>
+    <div class="range">
+        <p class="porcentaje" id="porcentaje">0%</p>
+        <input class="range2" type="range" id="range" min="0" max="360" value="0"  oninput="funcion1()">
+    </div>
+
+    <script>
+ let range=document.getElementById('range')
+  let box=document.getElementById('box')
+  let porcentaje=document.getElementById('porcentaje')
+      
+function funcion1(){
+  let valor=range.value;
+  box.style.transform=`rotateY(${valor}deg)`
+  porcentaje.textContent=valor+"%"
+}
+    </script>
+</body>
+</html>
